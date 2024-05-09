@@ -9,7 +9,11 @@ export default function App() {
   return (
     <>
       {selectedContactId ? (
-        <SelectedContact contact={selectedContactId} />
+        <SelectedContact
+          selectedContactId={selectedContactId}
+          setSelectedContactId={setSelectedContactId}
+          contact={selectedContactId}
+        />
       ) : (
         <ContactList setSelectedContactId={setSelectedContactId} />
       )}
